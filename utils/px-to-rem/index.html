@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PX to REM calculator | wbarton</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      form {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+
+      form label {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <form id="calc" class="form">
+      <!-- Target Size / Base Size = Value -->
+      <h1 class="h3">PX to REM calculator</h1>
+      <hr>
+      <div class="form-group">
+        <label for="base">Base size</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="base" value="16">
+          <div class="input-group-append">
+            <span class="input-group-text">px</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="target">Target size</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="target">
+          <div class="input-group-append">
+            <span class="input-group-text">px</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="output">Calculated size</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="output" readonly>
+          <div class="input-group-append">
+            <span class="input-group-text">rem</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Calculate</button>
+
+    </form>
+
+    <script src="./app.js"></script>
+
+    <script>
+      document.querySelector('#calc').addEventListener("submit", function(e){
+        e.preventDefault();
+        var base = document.getElementById('base').value;
+        var target = document.getElementById('target').value;
+        var output = Module.calc(base, target);
+        document.getElementById('output').value = output;
+      });
+    </script>
+
+  </body>
+</html>
