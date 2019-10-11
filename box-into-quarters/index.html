@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Box Into Quarters | wbarton</title>
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      #container {
+        border: 1px solid #2196f3;
+        width: 400px;
+        height: 400px;
+      }
+
+      /* ---------- */
+
+      #container div {
+        float: left;
+        width: 50%;
+        height: 50%;
+        outline: 1px solid tomato;
+        background-color: rgba(64, 224, 208, .1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <script>
+      document.querySelector('body').addEventListener('click', (e) => {
+        if (!e.target.matches('div')) {
+          return;
+        }
+        
+        for (let i = 0; i < 4; i++) {
+          e.target.appendChild(document.createElement('div'));
+        }
+      })
+    </script>
+
+  </body>
+</html>
