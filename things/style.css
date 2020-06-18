@@ -9,7 +9,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
   padding: 1rem;
   background-color: #f5f5f5;
 }
@@ -105,4 +104,34 @@ details[open] summary ~ * {
 @keyframes sweep {
   0%    {opacity: 0; transform: translateY(-10px);}
   100%  {opacity: 1; transform: translateY(0)}
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ececec;
+    background-color: #222831;
+  }
+
+  input,
+  textarea {
+    background-color: #222831;
+    color: #ececec;
+    border: 1px solid #30475e;
+  }
+
+:disabled, [readonly] {
+  background-color: #30475e;
+}
+  button {
+    background-color: tomato;
+    color:#222831;
+  }
+  pre {
+    display: block;
+    font-size: 87.5%;
+    color: #ececec;
+  }
+  hr {
+    border-color: #30475e;
+  }
 }
