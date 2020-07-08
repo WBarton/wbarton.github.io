@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HTML Generator Function | wbarton</title>
+
+    <link rel="stylesheet" href="../style.css">
+  
+  </head>
+
+  <body>
+    <form id="htmlGen">
+
+      <h1>HTML Generator</h1>
+      <hr>
+      <pre><code>['div']
+['h1', 'Text']
+['span', 'More', 'Text']
+['a', ['b', 'More'], ' Text']
+['p', '&lt;b&gt;Text&lt;/b&gt;']</code></pre>
+
+      <div class="form-group">
+        <label for="source">Source</label>
+        <textarea rows="4" id="source"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="output">Output</label>
+        <textarea rows="4" id="output" readonly></textarea>
+      </div>
+
+      <button type="submit">Generate</button>
+    </form>
+
+    <details>
+      <summary>Brief</summary>
+      <p>
+        A simplified version of HTML can be represented by using arrays to represent elements:
+      </p>
+      <ul>
+        <li>
+          The tag name is always the first entry in the array and is a string.
+        </li>
+        <li>
+          The children can be either arrays or strings.
+        </li>
+        <li>
+          If the child is a string it is treated as plain text, not HTML markup.
+        </li>
+        <li>
+          If the child is an array it is treated as a nested element.
+        </li>
+        <li>
+          There is no support for attributes, comments, etc., just elements and text.
+        </li>
+      </ul>
+      <p>
+        Implement a JavaScript function that takes an array and generates the HTML string.
+      </p>
+      <ul>
+        <li>
+          Empty tags should be self-closing.
+        </li>
+        <li>
+          Consecutive text nodes are merged in the finished output.
+        </li>
+        <li>
+          No libraries, build processes or transpilers.
+        </li>
+      </ul>
+      <p>
+        Examples:
+      </p>
+      <pre><code>['div'] => '&lt;div/>'
+['h1', 'Text'] => '&lt;h1>Text&lt;/h1>'
+['span', 'More', 'Text'] => '&lt;span>MoreText</span>'
+['a', ['b', 'More'], ' Text'] => '&lt;a>&lt;b>More&lt;/b> Text&lt;/a>'
+['p', '&lt;b>Text&lt;/b>'] => '&lt;p>&amp;lt;b&amp;gt;Text'&amp;lt;/b&amp;&gt&lt;/p>'</code></pre>
+    </details>
+
+    <script src="./app.js"></script>
+
+    <script>
+      document.querySelector('#htmlGen').addEventListener('submit', (e) => {
+        e.preventDefault();
+        var source = eval(document.getElementById('source').value);
+        var html = Module.generate(source);
+        document.getElementById('output').value = html;
+      });
+    </script>
+
+  </body>
+</html>

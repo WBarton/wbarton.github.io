@@ -1,0 +1,17 @@
+title: WBarton
+email: hello@wbarton.com
+description: >
+    Will Barton: Nottinghamshire based full-stack developer, specialising in
+    JavaScript development and accessible user interfaces.
+baseurl: ""
+year: 2016
+url: "https://www.wbarton.co.uk"
+twitter_username: wbarton
+
+theme: minima
+markdown: kramdown
+permalink: /posts/:title
+paginate: 10
+plugins:
+  - jekyll-seo-tag
+  - jekyll-coffeescript

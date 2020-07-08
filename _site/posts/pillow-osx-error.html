@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pillow OSX error | WBarton</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Pillow OSX error" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Got an error installing pillow on OS X, error below:" />
+<meta property="og:description" content="Got an error installing pillow on OS X, error below:" />
+<link rel="canonical" href="http://localhost:4000/posts/pillow-osx-error" />
+<meta property="og:url" content="http://localhost:4000/posts/pillow-osx-error" />
+<meta property="og:site_name" content="WBarton" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-03-18T17:50:00+00:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/pillow-osx-error"},"url":"http://localhost:4000/posts/pillow-osx-error","description":"Got an error installing pillow on OS X, error below:","dateModified":"2015-03-18T17:50:00+00:00","datePublished":"2015-03-18T17:50:00+00:00","headline":"Pillow OSX error","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="alternate" type="application/rss+xml" title="WBarton" href="/feed.xml">
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="/" class="site-name">
+          wbarton
+        </a>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">CV</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <main class="site-main" aria-label="Content">
+      <p>Got an error installing pillow on OS X, error below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/System/Library/Frameworks/Tcl.framew
+ork/Headers -I/System/Library/Frameworks/Tk.framework/Headers -I/usr/X11/include/freetype2 -IlibImaging -I/usr/X11/include -I/usr/local/include -I/Users/wbarton/code/.virtualenvs/ketchup-pin
+knwhites/include -I/usr/include -I/usr/local/Cellar/python/2.7.8_2/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c _imagingft.c -o build/temp.macosx-10.9-x86_64-2.7/_imagingft.
+
+_imagingft.c:62:10: fatal error: 'freetype/fterrors.h' file not found
+
+#include &lt;freetype/fterrors.h&gt;
+
+         ^
+
+1 error generated.
+
+error: command 'clang' failed with exit status 1
+</code></pre></div></div>
+
+<p>Fixed by symlinking freetype to freetype2 by running:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/local/include/freetype2 /usr/local/include/freetype
+</code></pre></div></div>
+
+
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        &copy; WBARTON LTD
+      </div>
+    </footer>
+
+  </body>
+
+</html>

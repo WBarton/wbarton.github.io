@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Annual Rate of Growth of Salary Calculator | wbarton</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+  </head>
+
+  <body>
+    <form id="calcForm">
+      <h1>Annual Rate of Growth of Salary</h1>
+      <hr>
+      <div class="form-group">
+        <label for="initial">Initial salary</label>
+        <input type="number" id="initial">
+      </div>
+
+      <div class="form-group">
+        <label for="current">Current salary</label>
+        <input type="number" id="current">
+      </div>
+
+      <div class="form-group">
+        <label for="years">Number of years</label>
+        <input type="number" id="years">
+      </div>
+
+      <h2>
+        Average: <span id="average">0</span>%
+      </h2>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <script src="./app.js"></script>
+
+    <script>
+      document.querySelector('#calcForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const initial = parseFloat(document.getElementById('initial').value) || 0;
+        const current = parseFloat(document.getElementById('current').value) || 0;
+        const years   = parseFloat(document.getElementById('years').value) || 0;
+        const average = Module.averageIncrease(initial, current, years);
+        document.getElementById('average').innerHTML = average;
+      });
+    </script>
+
+  </body>
+</html>

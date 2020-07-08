@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Slim Design | WBarton</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Slim Design" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There are ways of improving a designs performance using methods that have been used before responsive web design was conceived." />
+<meta property="og:description" content="There are ways of improving a designs performance using methods that have been used before responsive web design was conceived." />
+<link rel="canonical" href="http://localhost:4000/posts/slim-design" />
+<meta property="og:url" content="http://localhost:4000/posts/slim-design" />
+<meta property="og:site_name" content="WBarton" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-02-01T00:00:00+00:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/slim-design"},"url":"http://localhost:4000/posts/slim-design","description":"There are ways of improving a designs performance using methods that have been used before responsive web design was conceived.","dateModified":"2012-02-01T00:00:00+00:00","datePublished":"2012-02-01T00:00:00+00:00","headline":"Slim Design","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="alternate" type="application/rss+xml" title="WBarton" href="/feed.xml">
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="/" class="site-name">
+          wbarton
+        </a>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">CV</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <main class="site-main" aria-label="Content">
+      <p>There are ways of improving a designs performance using methods that have been used before responsive web design was conceived.</p>
+
+<p>Looking at the back-end of a website, the part the user does not see there is a lot of interesting items to consider. Most revolve around reducing file size and <acronym title="Hypertext Transfer Protocol">HTTP</acronym> requests.</p>
+
+<p>Some of these aspects I’ll only briefly mention because they are mostly commpn knowledge and a lot of resarch has already been don into them.</p>
+
+<h4 id="style-and-scripts">Style and Scripts</h4>
+
+<p>A website renders in the browser top to bottom. so the position at which styles and scripts are introduce is important, style sheets should be referenced at the top of the document, so that is is loaded before the markup is rendered meaning that the style of the website is displayed without a flash of unstyled content (FOUC) the first signs of this term being used is in an <a href="http://bluerobot.com/web/css/fouc.asp/" target="_blank">article on bluerobot.com in 2001</a>.</p>
+
+<p>Scripts should be placed at the bottom of a website because if placed at the top they are loaded in before the website continues to render which can cause a blank white screen.</p>
+
+<h4 id="minification">Minification</h4>
+
+<p>to reduce the file size of javascript and CSS files they can be minified, minifying removes any white space and comments.</p>
+
+<p>BlueRobot (2001) <em>Flash of Unstyled Content (FOUC)</em> [online] available from <a href="http://bluerobot.com/web/css/fouc.asp/">http://bluerobot.com/web/css/fouc.asp/</a> [15 December 2011]</p>
+
+<p>Souders, S. (2007) <em>High performance web sites : essential knowledge for frontend engineers</em>. Farnham: O’Reilly</p>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        &copy; WBARTON LTD
+      </div>
+    </footer>
+
+  </body>
+
+</html>

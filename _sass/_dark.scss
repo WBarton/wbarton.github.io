@@ -1,0 +1,63 @@
+// $dark: #364359;
+// $light: #FAFFFD;
+// $warm-light: #F3E8CB;
+// $primary: #FF6347;
+// $secondary: #008f6b; //#26AD92;
+// $other: #B7CE83;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark;
+    color: $warm-light;
+  }
+
+  header {
+    background-color: $dark;
+  }
+
+  nav {
+    ul {
+      li {
+        a {
+          background-color: lighten($dark, 5%);
+          color: $warm-light;
+          &:hover {
+            background-color: lighten($dark, 7.5%);
+            color: $warm-light;
+          }
+        }
+      }
+    }
+  }
+
+  main a {
+    color: lighten($secondary, 10%);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: lighten($secondary, 15%);
+    }
+  }
+
+  body.doc {
+    footer {
+      background-color: $dark;
+    }
+  
+    .page-container {
+      background-color: darken($dark, 10%);
+  
+      &:before,
+      &:after {
+        background-color: $dark;
+      }
+    }
+  
+    .page {
+      background-color: $dark;
+      box-shadow: 0px 0px 19px 1px transparentize($secondary, .1);
+    }
+  }
+}

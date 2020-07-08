@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>HTML5 Manifests | WBarton</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="HTML5 Manifests" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It is more than likely that my experimental artifacts during the PGC stage will be classed as a web app. With this in mind, for reference i have outlined below the necessary steps that i will need to take. Using the correct doctype is paramount, HTML5 documents use a new simpler doctype." />
+<meta property="og:description" content="It is more than likely that my experimental artifacts during the PGC stage will be classed as a web app. With this in mind, for reference i have outlined below the necessary steps that i will need to take. Using the correct doctype is paramount, HTML5 documents use a new simpler doctype." />
+<link rel="canonical" href="http://localhost:4000/posts/html5" />
+<meta property="og:url" content="http://localhost:4000/posts/html5" />
+<meta property="og:site_name" content="WBarton" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-23T00:00:00+01:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/html5"},"url":"http://localhost:4000/posts/html5","description":"It is more than likely that my experimental artifacts during the PGC stage will be classed as a web app. With this in mind, for reference i have outlined below the necessary steps that i will need to take. Using the correct doctype is paramount, HTML5 documents use a new simpler doctype.","dateModified":"2011-10-23T00:00:00+01:00","datePublished":"2011-10-23T00:00:00+01:00","headline":"HTML5 Manifests","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="alternate" type="application/rss+xml" title="WBarton" href="/feed.xml">
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="/" class="site-name">
+          wbarton
+        </a>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">CV</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <main class="site-main" aria-label="Content">
+      <p>It is more than likely that my experimental artifacts during the PGC stage will be classed as a web app. With this in mind, for reference i have outlined below the necessary steps that i will need to take.<br />
+Using the correct doctype is paramount, HTML5 documents use a new simpler doctype.</p>
+
+<pre>&lt;!DOCTYPE html&gt;</pre>
+
+<p>Because HTML5 allows offline storage a cache manifest file needs to be created, This manifest lists any files that need to be stored client side for offline use, for example the index page, the stylesheet, javascript and any images that are crucial for the design. Each item is on a separate line. Adding the date as a comment is recommended because the files are re-downloaded when the manifest is altered.</p>
+
+<pre>CACHE MANIFEST
+ # 2011-10-23
+ index.html
+ style.css
+ images/logo.png
+ scripts/function.js</pre>
+
+<p>The manifest offers more options than the example above…</p>
+
+<pre>CACHE MANIFEST
+ # 2011-10-23
+ # files that need to be cached
+ CACHE:
+ index.html
+ style.css
+ images/logo.png
+ scripts/function.js</pre>
+
+<pre># if the user is offline they are severed offline.html
+ FALLBACK:
+ offline.html</pre>
+
+<pre># resources that require the user to be online, these are not cached.
+ NETWORK:
+ login.php</pre>
+
+<p>The manifest must be referenced in the html.</p>
+
+<pre>&lt;html manifest="cache-manifest.manifest"&gt;</pre>
+
+<p>For the offline file support to work first the <code class="language-plaintext highlighter-rouge">.htaccess</code> file needs to be modified to add the mime-type <code class="language-plaintext highlighter-rouge">text/cache-manifest</code>.</p>
+
+<pre>AddType text/cache-manifest .manifest</pre>
+
+<p>This is a stripped down referenced guide designed for myself feel free to use it your millage may vary.</p>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        &copy; WBARTON LTD
+      </div>
+    </footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Average Color Function | wbarton</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .swatches {
+      display: flex;
+    }
+
+    .swatch {
+      flex-grow: 1;
+      height: 100px;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .swatch__label {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      text-align: center;
+      padding: .4rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .swatch {
+        background-color: #222831;
+      }
+      .swatch__label {
+        background-color: #222831;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form id="colorCalc">
+
+    <h1 class="h3">Hexadecimal Average Calculator</h1>
+    <hr>
+    <div class="form-group">
+      <label for="hex1">Hex 1</label>
+      <input type="text" id="hex1">
+    </div>
+
+    <div class="form-group">
+      <label for="hex2">Hex 2</label>
+      <input type="text" id="hex2">
+    </div>
+
+    <div class="form-group">
+      <label for="average">Average hex</label>
+      <input type="text" id="average" readonly>
+    </div>
+
+    <button type="submit">Calculate</button>
+
+    <div class="swatches">
+      <div id="displayHex1" class="swatch">
+        <div class="swatch__label">Hex 1</div>
+      </div>
+      <div id="displayHexAvg" class="swatch">
+        <div class="swatch__label">Average</div>
+      </div>
+      <div id="displayHex2" class="swatch">
+        <div class="swatch__label">Hex 2</div>
+      </div>
+    </div>
+
+    <hr>
+
+  </form>
+
+  <details>
+    <summary>Brief</summary>
+    <p>
+      Write a function that takes 2 colors as arguments and returns the average color.
+    </p>
+    <ul>
+      <li>
+        The parameters will be two 6-digit hexadecimal strings. This does not need to be validated.
+      </li>
+      <li>
+        The return value should be a 6-digit hexadecimal string.
+      </li>
+      <li>
+        The hexadecimal strings represent colors in RGB, much like in CSS.
+      </li>
+      <li>
+        The average color is to be determined by taking the arithmetic mean for each component: red, green and blue.
+      </li>
+    </ul>
+  </details>
+
+  <script src="./app.js"></script>
+
+  <script>
+    document.querySelector('#colorCalc').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const hex1 = document.getElementById('hex1').value;
+      const hex2 = document.getElementById('hex2').value;
+      const avgHex = Module.averageColor(hex1, hex2);
+      document.getElementById('displayHex1').style.backgroundColor = `#${hex1}`;
+      document.getElementById('displayHexAvg').style.backgroundColor = `#${avgHex}`;
+      document.getElementById('displayHex2').style.backgroundColor = `#${hex2}`;
+      document.getElementById('average').value = avgHex;
+    });
+  </script>
+
+</body>
+
+</html>
