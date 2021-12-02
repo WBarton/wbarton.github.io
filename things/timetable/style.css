@@ -72,3 +72,10 @@ h3 {
 .icon {
   font-size: 2rem;
 }
+hr {
+  border-color: #e5e5e5;
+  border-top: 0;
+  margin: 1rem 0;
+  border-color: #30475e;
+  border-bottom-width: 2px;
+}
