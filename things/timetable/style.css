@@ -1,6 +1,7 @@
 body {
   background-color: #222831;
   text-align: center;
+  padding: 0;
 }
 .deck {
   height: auto;
