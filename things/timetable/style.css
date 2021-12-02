@@ -16,7 +16,7 @@ body {
 
 .deck--heading {
   margin-bottom: .25rem;
-  padding: 0;
+  padding-bottom: 0;
 }
 
 .deck:hover {
