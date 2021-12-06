@@ -9,8 +9,8 @@
 
   <title>Timetable| wbarton</title>
 
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css?cb=1">
+  <link rel="stylesheet" href="./style.css?cb=1">
   <script src="https://kit.fontawesome.com/5236fc26f0.js" crossorigin="anonymous"></script>
 
 </head>
@@ -32,385 +32,393 @@
     </div>
   </div>
 
-  <div class="deck">
-    <div class="card">
-      <h3>Monday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>PE</h3>
-      <div class="icon">
-        <i class="fas fa-running"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Tuesday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Wednesday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>PE</h3>
-      <div class="icon">
-        <i class="fas fa-running"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Thursday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Friday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck deck--weekend">
-    <div class="card">
-      <h3>Saturday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Home</h3>
-      <div class="icon">
-        <i class="fas fa-home"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Anything</h3>
-      <div class="icon">
-        <i class="fas fa-hat-wizard"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-  
-  <div class="deck deck--weekend">
-    <div class="card">
-      <h3>Sunday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Home</h3>
-      <div class="icon">
-        <i class="fas fa-home"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Anything</h3>
-      <div class="icon">
-        <i class="fas fa-hat-wizard"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
+  <div id="currentWeek"></div>
   <hr>
+  <div id="nextWeek"></div>
+
+  <div id="dad" style="display: none;">
+    <div class="deck">
+      <div class="card">
+        <h3>Monday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>PE</h3>
+        <div class="icon">
+          <i class="fas fa-running"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Tuesday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Wednesday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>PE</h3>
+        <div class="icon">
+          <i class="fas fa-running"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Thursday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Friday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck deck--weekend">
+      <div class="card">
+        <h3>Saturday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Home</h3>
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Anything</h3>
+        <div class="icon">
+          <i class="fas fa-hat-wizard"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="deck deck--weekend">
+      <div class="card">
+        <h3>Sunday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Home</h3>
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Anything</h3>
+        <div class="icon">
+          <i class="fas fa-hat-wizard"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <div class="deck">
-    <div class="card">
-      <h3>Monday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
+  <div id="mum" style="display: none;"> 
+    <div class="deck">
+      <div class="card">
+        <h3>Monday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>PE</h3>
+        <div class="icon">
+          <i class="fas fa-running"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Tuesday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <h3>PE</h3>
-      <div class="icon">
-        <i class="fas fa-running"></i>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Wednesday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>PE</h3>
+        <div class="icon">
+          <i class="fas fa-running"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Thursday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dad</h3>
+        <div class="icon">
+          <i class="fas fa-male"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="card">
+        <h3>Friday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>School</h3>
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Uniform</h3>
+        <div class="icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck deck--weekend">
+      <div class="card">
+        <h3>Saturday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Home</h3>
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Anything</h3>
+        <div class="icon">
+          <i class="fas fa-hat-wizard"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck deck--weekend">
+      <div class="card">
+        <h3>Sunday</h3>
+        <div class="icon">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Home</h3>
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Anything</h3>
+        <div class="icon">
+          <i class="fas fa-hat-wizard"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mum</h3>
+        <div class="icon">
+          <i class="fas fa-female"></i>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="deck">
-    <div class="card">
-      <h3>Tuesday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Wednesday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>PE</h3>
-      <div class="icon">
-        <i class="fas fa-running"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Thursday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Dad</h3>
-      <div class="icon">
-        <i class="fas fa-male"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck">
-    <div class="card">
-      <h3>Friday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>School</h3>
-      <div class="icon">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Uniform</h3>
-      <div class="icon">
-        <i class="fas fa-user-tie"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck deck--weekend">
-    <div class="card">
-      <h3>Saturday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Home</h3>
-      <div class="icon">
-        <i class="fas fa-home"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Anything</h3>
-      <div class="icon">
-        <i class="fas fa-hat-wizard"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="deck deck--weekend">
-    <div class="card">
-      <h3>Sunday</h3>
-      <div class="icon">
-        <i class="fas fa-calendar-day"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Home</h3>
-      <div class="icon">
-        <i class="fas fa-home"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Anything</h3>
-      <div class="icon">
-        <i class="fas fa-hat-wizard"></i>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Mum</h3>
-      <div class="icon">
-        <i class="fas fa-female"></i>
-      </div>
-    </div>
-  </div>
+  <script src="./app.js?cb=1"></script>
 
 </body>
 
